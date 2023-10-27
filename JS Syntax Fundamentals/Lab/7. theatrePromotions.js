@@ -1,46 +1,39 @@
-function theatre(day, age){
-    let result = 0
-    
-    if (age < 0 || age > 122){
-        console.log("Error!")
-    }else{
-        if (day === "Weekday"){
-            if (age <= 18){
-                result += 12
-
-            }else if (age <= 64){
-                result += 18
-
-            }else if (age <= 122){
-                result += 12
-            }
-        } else if (day === "Weekend"){
-            if (age <= 18){
-                result += 15
-                
-            }else if (age <= 64){
-                result += 20
-
-            }else if (age <= 122){
-                result += 15
-            }
-                
-            }else if (day === "Holiday"){
-                if (age <= 18){
-                    result += 5
-                    
-                }else if (age <= 64){
-                    result += 12
-    
-                }else if (age <= 122){
-                    result += 10
-                }
-                
-            }
-
-        console.log(`${result}$`)
-
+function theatre(day, age) {
+    if (age < 0 || age > 122) {
+        console.log("Error!");
+        return;
     }
+
+    let prices = {
+        "Weekday": {
+            "child": 12,
+            "adult": 18,
+            "senior": 12
+        },
+        "Weekend": {
+            "child": 15,
+            "adult": 20,
+            "senior": 15
+        },
+        "Holiday": {
+            "child": 5,
+            "adult": 12,
+            "senior": 10
+        }
+    };
+
+    let ageCategory = "";
+    if (age <= 18) {
+        ageCategory = "child";
+    } else if (age <= 64) {
+        ageCategory = "adult";
+    } else {
+        ageCategory = "senior";
+    }
+
+    const result = (prices[day] && prices[day][ageCategory]);
+    console.log(`${result}$`);
 }
+
 
 theatre('Holiday', 15)
