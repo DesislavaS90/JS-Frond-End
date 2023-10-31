@@ -7,8 +7,8 @@ function sum(num1, num2){
         numbers += i + " ";
     }
 
-    console.log(numbers)
-    console.log(`Sum: ${result}`)
+    console.log(numbers);
+    console.log(`Sum: ${result}`);
 }
 
-sum(5, 10)
+sum(5, 10);

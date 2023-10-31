@@ -6,18 +6,18 @@ function vacation(people, type, day){
         "Regular": {"Friday": 15, "Saturday": 20, "Sunday": 22.50}
     };
 
-    price += info[type][day] * people
+    price += info[type][day] * people;
 
     if (type === "Students" && people >= 30){
-        price *= 0.85
+        price *= 0.85;
     }else if (type === "Business" && people >= 100){
-        price -= 10 * info[type][day]
+        price -= 10 * info[type][day];
     }else if (type === "Regular" && (people >= 10 && people <= 20 )){
-        price *= 0.95
+        price *= 0.95;
 
     }
 
-    console.log(`Total price: ${price.toFixed(2)}`)
+    console.log(`Total price: ${price.toFixed(2)}`);
 }
 
-vacation(100,"Business","Sunday")
+vacation(100,"Business","Sunday");

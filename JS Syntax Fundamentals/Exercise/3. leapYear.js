@@ -1,12 +1,12 @@
 function year(number){
     let output;
     if (number % 4 === 0 || number % 400 === 0 && number % 100 !== 0){
-        output = "yes"
+        output = "yes";
     }else{
-        output = "no"
+        output = "no";
     }
 
-    console.log(output)
+    console.log(output);
 }
 
-year(2003)
+year(2003);

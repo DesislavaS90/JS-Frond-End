@@ -16,8 +16,8 @@ function age(num){
             ageCategory = "elder"
         }
 
-        console.log(ageCategory)
+        console.log(ageCategory);
     }
 }
 
-age('10')
+age('10');

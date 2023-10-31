@@ -6,7 +6,7 @@ function sumDigits(num){
         result += parseInt(num2[i]);
     }
 
-    console.log(result)
+    console.log(result);
 }
 
-sumDigits(97561)
+sumDigits(97561);
