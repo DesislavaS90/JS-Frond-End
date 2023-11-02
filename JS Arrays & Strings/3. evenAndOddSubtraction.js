@@ -11,8 +11,8 @@ function solve(array){
 
     }
 
-    console.log(Math.abs(odd - even))
+    console.log(even - odd)
     
 }
 
-solve([1,2,3,4,5,6])
+solve([3, 5, 7, 9])

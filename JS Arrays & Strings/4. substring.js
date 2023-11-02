@@ -1,7 +1,5 @@
 function substring(string, startIndex, count){
-    let result;
-
-    result = string.substring(startIndex, count + 1)
+    let result = string.substring(startIndex, startIndex + count);
 
     console.log(result)
 }

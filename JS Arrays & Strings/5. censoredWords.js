@@ -1,5 +1,5 @@
 function solve(text, word){
-    let result = text.replaceAll(word, "*".repeat(word.length))
+    let result = text.replace(new RegExp(word, "g"), "*".repeat(word.length))
 
     console.log(result)
 
