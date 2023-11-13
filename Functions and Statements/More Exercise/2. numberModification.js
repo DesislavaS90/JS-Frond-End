@@ -1,10 +1,9 @@
 function numberModification(num){
     let numAsArr = num.toString().split("");
-    let sum = numAsArr.reduce(acc, digit)
     
 
     for (let number of numAsArr){
-        sum += Number(number);
+        let sum = numAsArr.reduce((acc, digit) => acc + Number(digit), 0);
         let average = sum / numAsArr.length;
 
         if (average >= 5){
@@ -18,4 +17,4 @@ function numberModification(num){
     console.log(numAsArr.join(""));
 }
 
-numberModification(101)
+numberModification(5835)
