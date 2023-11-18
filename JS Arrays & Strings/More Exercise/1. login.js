@@ -19,5 +19,5 @@ function login(usernames) {
    }   
 }
 
-// login(['Acer','login','go','let me in','recA'])
+
 login(['sunny','rainy','cloudy','sunny','not sunny'])

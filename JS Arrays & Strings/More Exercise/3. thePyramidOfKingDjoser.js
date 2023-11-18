@@ -14,7 +14,7 @@ function calculateResources(base, increment) {
 
         if (i % 5 === 0 && i !== steps) {
             lapisLazuli += (4 * (currentBase - 1)) * increment;
-            stepHeight++;
+            stepHeight += increment;
         } else if (i === steps) {
             gold += stepArea * increment;
         } else {
@@ -26,7 +26,7 @@ function calculateResources(base, increment) {
         currentBase -= 2;
     }
 
-    console.log(`Stone required: ${Math.round(stone)}`);
+    console.log(`Stone required: ${Math.ceil(stone)}`);
     console.log(`Marble required: ${Math.ceil(marble)}`);
     console.log(`Lapis Lazuli required: ${Math.ceil(lapisLazuli)}`);
     console.log(`Gold required: ${Math.ceil(gold)}`);
@@ -34,4 +34,4 @@ function calculateResources(base, increment) {
 }
 
 
-calculateResources(11, 0.75);
+calculateResources(1, 1);
