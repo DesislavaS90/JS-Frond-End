@@ -22,7 +22,7 @@ function calculateResources(base, increment) {
             marble += (4 * (currentBase - 1)) * increment;
         }
 
-        pyramidHeight += stepHeight;
+        pyramidHeight += 1;
         currentBase -= 2;
     }
 
@@ -34,4 +34,4 @@ function calculateResources(base, increment) {
 }
 
 
-calculateResources(1, 1);
+calculateResources(11, 0.75);
