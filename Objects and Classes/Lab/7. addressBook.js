@@ -12,7 +12,7 @@ function addressBook(input) {
 
     let sorted = Object.entries(addressBook).sort((a, b) => a[0].localeCompare(b[0]));
 
-    console.log(sorted.forEach(element => console.log(`${element[0]} -> ${element[1]}`)));
+    console.log(sorted.map(x => `${x[0]} -> ${x[1]}`).join('\n'));
     
     
 }
