@@ -1,5 +1,6 @@
 function cats(arr) {
 
+
     class Cat {
         constructor(name, age) {
             this.name = name
@@ -11,11 +12,10 @@ function cats(arr) {
         }
     }
 
-    const [name, age] = arr.shift().split(' ');
-    const cat = new Cat(name, parseInt(age));
+    const catObjects = arr.map(x => new Cat(x.split(' ')[0], x.split(' ')[1]));
 
-    
-    cat.meow();
+    catObjects.forEach(x => x.meow());
+
     
 }
 
