@@ -16,9 +16,7 @@ function oddOccurrences(string) {
     }
 
     console.log(Array.from(result.keys()).filter(x => result.get(x) % 2 !== 0).join(' '));
-        
-    
-    
+         
 }
 
 oddOccurrences('Java C# Php PHP Java PhP 3 C# 3 1 5 C#')

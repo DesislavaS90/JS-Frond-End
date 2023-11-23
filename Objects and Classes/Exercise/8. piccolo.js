@@ -6,11 +6,10 @@ function parkingInfo(carPlate) {
 
         let [direction, carNumber] = carPlate[i].split(', ');
 
-        if (direction === 'IN'){
+        if (direction === 'IN' && !parking.includes(carNumber)){
 
             parking.push(carNumber);
-        }else{
-
+        }else if(direction === 'OUT' && parking.includes(carNumber)){
             let index = parking.indexOf(carNumber);
             parking.splice(index, 1);
         }
@@ -20,10 +19,7 @@ function parkingInfo(carPlate) {
         console.log(parking.sort((a, b) => a.localeCompare(b)).join('\n'));
     }else{
         console.log('Parking Lot is Empty');
-    }
-
-
-    
+    }   
 }
 
 // parkingInfo(['IN, CA2844AA',

@@ -14,10 +14,7 @@ function makeADictionary(strJSON) {
 
     let sorted = Object.entries(dictionary).sort((a, b) => a[0].localeCompare(b[0]));
 
-    console.log(sorted.map(x => `Term: ${x[0]} => Definition: ${x[1]}`).join('\n'));
-
-
-    
+    console.log(sorted.map(x => `Term: ${x[0]} => Definition: ${x[1]}`).join('\n'));    
 }
 
 makeADictionary([
