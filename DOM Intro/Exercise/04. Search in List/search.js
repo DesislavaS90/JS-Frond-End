@@ -20,7 +20,4 @@ function search() {
 
    result.textContent = `${counter} matches found`;
 
-   
-
-
 }
