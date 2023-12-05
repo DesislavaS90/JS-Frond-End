@@ -6,7 +6,7 @@ function solve() {
   let generateBtn = buttons[0];
   let buyBtn = buttons[1];
 
-  let table = document.getElementsByClassName('table');
+  let table = document.querySelectorAll('tbody');
 
 
   generateBtn.addEventListener('click', generate);
@@ -38,9 +38,7 @@ function solve() {
       checkTd.type = 'checkbox';
       tr.appendChild(checkTd);
       
-
       table[0].appendChild(tr);
-
       text[0].value = '';
 
     } 
@@ -57,12 +55,11 @@ function solve() {
     let furniture = [];
 
     for (const table of tables) {
-      let type = table.querySelector('td:nth-child(1)').textContent;
+      let type = table.querySelector('td:nth-child(2)').textContent;
       let isChcked = table.querySelector('input[type="checkbox"]');
-      let price = Number(table.querySelector('td:nth-child(2)').textContent);
-      let decFactor = Number(table.querySelector('td:nth-child(3)').textContent);
+      let price = Number(table.querySelector('td:nth-child(3)').textContent);
+      let decFactor = Number(table.querySelector('td:nth-child(4)').textContent);
 
-      console.log(type);
       
       if (isChcked.checked) {
         sum += price;
@@ -72,7 +69,7 @@ function solve() {
 
       text[1].value = `Bought furniture: ${furniture.join(', ')}\
       \nTotal price: ${sum.toFixed(2)}\
-      \nAverage decoration factor: ${average.toFixed(2)}`;
+      \nAverage decoration factor: ${average / furniture.length}`;
       
     }
 
