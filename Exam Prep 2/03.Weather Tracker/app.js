@@ -68,6 +68,8 @@
         await loadHistory();
     }
 
+    
+
     async function editWeather(e) {
 
         e.preventDefault();
@@ -99,10 +101,10 @@
         temperatureInput.value = '';
         dateInput.value = '';
 
+        await loadHistory();
+
         addWeatherBtn.disabled = false;
         editWeatherBtn.disabled = true;
-
-        await loadHistory();
     }
 
     function renderHistory(history) {
